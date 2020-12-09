@@ -33,7 +33,7 @@ def worker():
     with open("./chainfiles/{}@{}.json".format(account_info["username"].lower(), domain)) as f:
         textModel = markovify.Text.from_json(f.read())
         sentence = textModel.make_sentence(tries=300)
-        sentence = "".join(sentence.split()) + ' #bot'
+        sentence = "".join(sentence.split()) + '、ガンバレ！ #bot'
         sentence = re.sub(r'(:.*?:)', r' \1 ', sentence)
         print(sentence)
     try:
